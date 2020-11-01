@@ -20,6 +20,10 @@
   position: relative;
 }
 
+.NavigationItems li a::last-child {
+  padding-right: 0;
+}
+
 .NavigationItems li a::first-letter {
   color: #000;
   font-size: 18px;

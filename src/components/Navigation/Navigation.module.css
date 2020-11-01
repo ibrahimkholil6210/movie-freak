@@ -2,6 +2,7 @@
   box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
   padding: 20px 0;
   background-color: #fff;
+  border-bottom: 1px solid rgba(40, 44, 63, 0.15);
 }
 
 .HeaderArea nav {

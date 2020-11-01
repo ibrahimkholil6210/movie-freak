@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Logo.module.css";
-import Aux from "../../../hoc/Auxiliary/Aux";
+import Aux from "../../../hoc/Auxiliary/Auxiliary";
 
 const Logo = (porps) => {
   return (

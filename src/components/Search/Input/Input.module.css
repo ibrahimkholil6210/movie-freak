@@ -1,0 +1,22 @@
+.SearchInputArea {
+  width: 100%;
+  text-align: center;
+}
+
+.SearchInputArea input {
+  width: 50%;
+  margin: 0 auto;
+  height: 50px;
+  border: 1px solid #fcfcfc;
+  padding: 0 25px;
+  background-color: #f8f6f8;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  outline: none;
+  font-size: 18px;
+}
+
+.SearchInputArea input:focus {
+  border: 1px solid #ececec;
+  outline: none;
+}
