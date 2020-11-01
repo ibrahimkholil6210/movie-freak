@@ -1,0 +1,16 @@
+.LogoWrapeer {
+  display: flex;
+}
+
+.LogoWrapeer h3 {
+  margin: 0;
+  padding: 5px;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.BgBlack {
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+}

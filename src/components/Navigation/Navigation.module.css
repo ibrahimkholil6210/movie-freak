@@ -1,0 +1,13 @@
+.HeaderArea {
+  box-shadow: 0 15px 40px -20px rgba(40, 44, 63, 0.15);
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+.HeaderArea nav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+}

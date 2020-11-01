@@ -1,0 +1,36 @@
+.NavigationItems {
+  display: flex;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.NavigationItems li {
+  position: relative;
+  display: inline-block;
+}
+
+.NavigationItems li a {
+  display: block;
+  padding: 5px 30px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  color: #3d4152;
+  position: relative;
+}
+
+.NavigationItems li a::first-letter {
+  color: #000;
+  font-size: 18px;
+}
+
+.NavigationItems li a span {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+  line-height: 0;
+  font-size: 18px;
+  color: #3d4152;
+}
