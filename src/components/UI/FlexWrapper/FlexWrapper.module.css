@@ -1,0 +1,4 @@
+.FlexWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
