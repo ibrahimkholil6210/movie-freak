@@ -44,7 +44,7 @@ const Sidenav = (props) => {
               <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/y4vnumwu4f8olsly1hnw" alt="Navigation img" />
             </div>
             <div className={classes.NavHelperItemCaption}>
-              <h5>Only on Swiggy</h5>
+              <h5>Only on Movie Freak</h5>
               <p>80 options</p>
             </div>
           </li>
@@ -53,7 +53,7 @@ const Sidenav = (props) => {
               <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/bm8bziikwyvwqsml1clm" alt="Navigation img" />
             </div>
             <div className={classes.NavHelperItemCaption}>
-              <h5>Vegetarian </h5>
+              <h5>Peoples </h5>
               <p>80 options</p>
             </div>
           </li>
