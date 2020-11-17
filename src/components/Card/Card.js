@@ -5,14 +5,14 @@ import { MdStars } from "react-icons/md";
 const Card = (props) => {
   return (
     <div className={classes.CardWrapper}>
-      <div className={classes.CardImgWrapper}>
-        <img src={props.image} alt="Food" />
+      <div className={classes.CardImgWrapper} style={props.height ? { height: props.height } : null}>
+        <img src={props.image} alt='Food' style={props.bRadius === false ? { borderRadius: "0px" } : null} />
       </div>
       <div className={classes.CardDesc}>
         <h3>{props.title}</h3>
         <p>{props.genres}</p>
       </div>
-      <div className={classes.MetaInformation}>
+      <div className={classes.MetaInformation} style={props.isBlog === true ? { display: "none" } : null}>
         <div className={classes.CardRating} style={props.rating < 7.5 ? { background: "#db7c38" } : { background: "#48c479" }}>
           <MdStars />
           {props.rating}
@@ -27,7 +27,7 @@ const Card = (props) => {
         </div>
       </div>
       <div className={classes.CardQuickViewButton}>
-        <button>Quick View</button>
+        <button>{props.isBlog === true ? "View More" : "Quick View"}</button>
       </div>
     </div>
   );

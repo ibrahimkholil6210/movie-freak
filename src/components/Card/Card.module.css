@@ -9,6 +9,7 @@
 .CardImgWrapper img {
   width: 100%;
   border-radius: 5px;
+  height: 100%;
 }
 
 .CardDesc h3 {

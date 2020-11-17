@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./Popular.module.css";
+import classes from "./SectionCreator.module.css";
 import SectionWrapper from "../../UI/SectionWrapper/SectionWrapper";
 import SectionTitle from "../../UI/SectionTitle/SectionTitle";
 import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";
@@ -8,7 +8,7 @@ import Card from "../../Card/Card";
 const Popular = (props) => {
   return (
     <SectionWrapper>
-      <SectionTitle>Popular</SectionTitle>
+      <SectionTitle title={props.title} sectionNavigation={props.sectionNavigation} />
       <FlexWrapper>
         <Card
           image={"https://image.tmdb.org/t/p/w220_and_h330_face/aOlv1Yw4zchFmBr5KT0sPpmOm87.jpg"}

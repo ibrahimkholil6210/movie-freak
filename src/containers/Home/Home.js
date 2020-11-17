@@ -7,6 +7,8 @@ import classes from "./Home.module.css";
 import Search from "../../components/Search/Search";
 import Sidenav from "../../components/Sidenav/Sidenav";
 import Sections from "../../components/Sections/Sections";
+import Blog from "../../components/Blog/Blog";
+import Footer from "../../components/Footer/Footer";
 
 class Home extends Component {
   render() {
@@ -20,6 +22,12 @@ class Home extends Component {
             <Sections />
           </FlexWrapper>
         </Container>
+        <div className={classes.IsolatedBlogWrapper}>
+          <Container>
+            <Blog />
+            <Footer />
+          </Container>
+        </div>
       </Aux>
     );
   }
