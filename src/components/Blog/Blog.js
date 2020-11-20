@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./Blog.module.css";
-import { MdVerticalAlignBottom } from "react-icons/md";
 import FlexWrapper from "../UI/FlexWrapper/FlexWrapper";
 import Card from "../Card/Card";
 
@@ -8,9 +7,7 @@ const Blog = (props) => {
   return (
     <>
       <div className={classes.BlogSectionTitle}>
-        <h2>
-          <MdVerticalAlignBottom /> Blog
-        </h2>
+        <h2> Blog</h2>
       </div>
 
       <div className={classes.BlogItemWeapper}>

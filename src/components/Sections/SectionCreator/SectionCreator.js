@@ -1,5 +1,4 @@
 import React from "react";
-import classes from "./SectionCreator.module.css";
 import SectionWrapper from "../../UI/SectionWrapper/SectionWrapper";
 import SectionTitle from "../../UI/SectionTitle/SectionTitle";
 import FlexWrapper from "../../UI/FlexWrapper/FlexWrapper";

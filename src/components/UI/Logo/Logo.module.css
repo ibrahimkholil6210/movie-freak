@@ -7,10 +7,10 @@
   padding: 5px;
   font-size: 26px;
   font-weight: 800;
+  color: #fff;
+  font-style: italic;
 }
 
 .BgBlack {
-  border-radius: 5px;
-  background-color: #000;
-  color: #fff;
+  font-weight: 400 !important;
 }

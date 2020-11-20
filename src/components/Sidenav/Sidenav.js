@@ -1,5 +1,10 @@
 import React from "react";
 import classes from "./Sidenav.module.css";
+import newItem from "../../assets/new_item.png";
+import onlyOnItems from "../../assets/only_on_item.png";
+import peopleItem from "../../assets/people_item.png";
+import premiumItem from "../../assets/premium_item.png";
+import seeAllItem from "../../assets/see_all_item.png";
 
 const Sidenav = (props) => {
   return (
@@ -9,8 +14,8 @@ const Sidenav = (props) => {
           <li>
             <div className={classes.NavHelperItemImg}>
               <img
-                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/rng/md/carousel/production/vt13uzhjrg5r49kh9oru"
-                alt="Navigation img"
+                src='https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/rng/md/carousel/production/vt13uzhjrg5r49kh9oru'
+                alt='Navigation img'
               />
             </div>
             <div className={classes.NavHelperItemCaption}>
@@ -20,7 +25,7 @@ const Sidenav = (props) => {
           </li>
           <li>
             <div className={classes.NavHelperItemImg}>
-              <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/hxizld3pqhnk0smw27sl" alt="Navigation img" />
+              <img src={newItem} alt='Navigation img' />
             </div>
             <div className={classes.NavHelperItemCaption}>
               <h5>What's New</h5>
@@ -29,10 +34,7 @@ const Sidenav = (props) => {
           </li>
           <li>
             <div className={classes.NavHelperItemImg}>
-              <img
-                src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/marketing-dashboard/carousel/ftnsdmo6fotidtzobbm2"
-                alt="Navigation img"
-              />
+              <img src={premiumItem} alt='Navigation img' />
             </div>
             <div className={classes.NavHelperItemCaption}>
               <h5>Premium</h5>
@@ -41,7 +43,7 @@ const Sidenav = (props) => {
           </li>
           <li>
             <div className={classes.NavHelperItemImg}>
-              <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/y4vnumwu4f8olsly1hnw" alt="Navigation img" />
+              <img src={onlyOnItems} alt='Navigation img' />
             </div>
             <div className={classes.NavHelperItemCaption}>
               <h5>Only on Movie Freak</h5>
@@ -50,7 +52,7 @@ const Sidenav = (props) => {
           </li>
           <li>
             <div className={classes.NavHelperItemImg}>
-              <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/bm8bziikwyvwqsml1clm" alt="Navigation img" />
+              <img src={peopleItem} alt='Navigation img' />
             </div>
             <div className={classes.NavHelperItemCaption}>
               <h5>Peoples </h5>
@@ -63,7 +65,7 @@ const Sidenav = (props) => {
         <ul className={classes.SectionHelperNavigation}>
           <li>
             <div className={classes.NavHelperItemImg}>
-              <img src="https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/See_all_cj8kln" alt="Navigation img" />
+              <img src={seeAllItem} alt='Navigation img' />
             </div>
             <div className={classes.NavHelperItemCaption}>
               <h5>SEE ALL</h5>

@@ -6,7 +6,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  justify-content: center;
+  justify-content: flex-end;
   display: flex;
   align-content: center;
 }
@@ -15,11 +15,9 @@
   display: inline-block;
   font-size: 16px;
   text-transform: capitalize;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-weight: 300;
   padding: 0 15px;
   color: #fff;
-  text-decoration: underline;
   cursor: pointer;
   position: relative;
 }
@@ -32,9 +30,10 @@
 }
 
 .FooterCopyRightWrapper {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 14px;
-  text-align: center;
+  text-align: right;
   margin-top: 25px;
-  color: #ffffff;
+  letter-spacing: 1px;
+  color: #d1d1d1;
 }

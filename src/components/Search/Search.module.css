@@ -1,5 +1,5 @@
 .SearchWrapper {
-  background-color: #fff;
+  background-color: #1d4354;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,19 +17,20 @@
   font-size: 65px;
   font-weight: 700;
   text-transform: capitalize;
+  color: #6fda44;
 }
 
 .SearchTopSection p span {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 15px;
-  color: #3d4152;
+  color: #f4f4f4;
   text-transform: capitalize;
   display: inline-block;
   margin-right: 5px;
 }
 
 .SearchTopSection p span::first-letter {
-  color: #000000;
+  color: #ffffff;
   font-size: 25px;
 }

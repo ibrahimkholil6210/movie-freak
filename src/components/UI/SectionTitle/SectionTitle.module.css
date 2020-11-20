@@ -24,7 +24,7 @@
   font-weight: 400;
   text-transform: uppercase;
   font-size: 13px;
-  color: #3d4152;
+  color: #1d4354;
 }
 
 .TitleItem:nth-child(2) ul li:last-child {
@@ -38,5 +38,5 @@
 
 .TitleItem:nth-child(2) ul li::first-letter {
   font-size: 18px;
-  color: #000;
+  color: #6fda44;
 }

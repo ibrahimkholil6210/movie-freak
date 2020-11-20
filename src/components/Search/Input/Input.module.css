@@ -10,8 +10,7 @@
   border: 1px solid #fcfcfc;
   padding: 0 25px;
   background-color: #f8f6f8;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-radius: 30px;
   outline: none;
   font-size: 18px;
 }
