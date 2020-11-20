@@ -1,5 +1,45 @@
 .IsolatedBlogWrapper {
   background-color: #1d4354;
-  margin-top: 30px;
   padding: 45px 0;
+}
+
+.DetailsWrapper {
+  background-image: url("https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/sbvMZYlGrPSkZ08TIrV6pqwO0ST.jpg");
+  padding: 15px 0;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 999;
+}
+
+.DetailsWrapper::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, rgba(14.12%, 14.51%, 16.86%, 1) 150px, rgba(22.35%, 22.35%, 22.35%, 0.84) 100%);
+  opacity: 0.9;
+  z-index: -1;
+  content: "";
+}
+
+.DetailsMainImageWrapper {
+  flex-basis: 25%;
+  height: 100%;
+}
+
+.DetailsMainImageWrapper img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.MainInfoWrapper {
+  flex: 1;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

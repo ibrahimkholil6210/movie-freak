@@ -6,15 +6,25 @@ import Container from "../../hoc/Container/Container";
 import FlexWrapper from "../../components/UI/FlexWrapper/FlexWrapper";
 import classes from "./Details.module.css";
 import Footer from "../../components/Footer/Footer";
+import MainInfoContainer from "../../components/MainInfoContainer/MainInfoContainer";
 
 class Details extends Component {
   render() {
     return (
       <Aux>
         <Navigation />
-        <Container>
-          <FlexWrapper></FlexWrapper>
-        </Container>
+        <div className={classes.DetailsWrapper}>
+          <Container>
+            <FlexWrapper>
+              <div className={classes.DetailsMainImageWrapper}>
+                <img src='https://image.tmdb.org/t/p/w300_and_h450_bestv2/aOlv1Yw4zchFmBr5KT0sPpmOm87.jpg' alt='Banner' />
+              </div>
+              <div className={classes.MainInfoWrapper}>
+                <MainInfoContainer />
+              </div>
+            </FlexWrapper>
+          </Container>
+        </div>
 
         <div className={classes.IsolatedBlogWrapper}>
           <Container>

@@ -38,3 +38,19 @@
   font-size: 18px;
   color: #6fda44;
 }
+
+.Active {
+  color: #6fda44 !important;
+  position: relative;
+}
+
+.Active::before {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  width: 3px;
+  height: 50%;
+  background-color: #68cc45;
+  transform: translateY(-50%);
+  content: "";
+}

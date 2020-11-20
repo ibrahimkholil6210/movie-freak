@@ -1,0 +1,75 @@
+.FancyNav {
+  margin: 15px 0;
+}
+
+.FancyNav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.FancyNav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.RegularItem {
+  background-color: #1d4354;
+  padding: 5px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.PlayTeaserButton {
+  color: #ffffff;
+  font-weight: 500;
+  position: relative;
+  font-size: 16px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.PlayTeaserButton svg {
+  position: absolute;
+  top: 53%;
+  left: 0;
+  transform: translateY(-50%);
+  content: "";
+}
+
+.ScoreButton {
+  display: flex;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ScoreButton .CircleWrapper {
+  height: 70px;
+  width: 70px;
+  background-color: #1d4354;
+  font-weight: inherit;
+  color: inherit;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.CircleWrapper svg {
+  width: 85%;
+}
+
+.Dflex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

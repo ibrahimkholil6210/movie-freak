@@ -1,0 +1,58 @@
+.DetailsTitleArea h2 {
+  font-size: 35px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.DetailsTitleArea .Released {
+  color: #bbb;
+  font-weight: 400;
+}
+
+.InformationMore ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.InformationMore ul li {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  margin-right: 15px;
+  position: relative;
+}
+
+.StoryLineShort h3 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.StoryLineShort p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.CreatorInormation {
+  margin-top: 15px;
+}
+
+.CreatorInormation ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.CreatorInormation ul li {
+  color: #ffffff;
+  margin-right: 50px;
+  font-weight: 500;
+}
+
+.CreatorInormation ul li span {
+  font-size: 14px;
+}

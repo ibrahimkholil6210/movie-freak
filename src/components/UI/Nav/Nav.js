@@ -1,43 +1,24 @@
 import React from "react";
 import classes from "./Nav.module.css";
 import Aux from "../../../hoc/Auxiliary/Auxiliary";
-import { MdHome, MdStars, MdTrendingUp, MdPublic } from "react-icons/md";
 
 const Nav = (porps) => {
   return (
     <Aux>
       <ul className={classes.NavigationItems}>
         <li>
-          <a href="/">
-            <span>
-              <MdHome />
-            </span>
+          <a href='/' className={classes.Active}>
             Home
           </a>
         </li>
         <li>
-          <a href="/">
-            <span>
-              <MdStars />
-            </span>
-            Trending
-          </a>
+          <a href='/'>Trending</a>
         </li>
         <li>
-          <a href="/">
-            <span>
-              <MdTrendingUp />
-            </span>
-            Featured
-          </a>
+          <a href='/'>Featured</a>
         </li>
         <li>
-          <a href="/">
-            <span>
-              <MdPublic />
-            </span>
-            People
-          </a>
+          <a href='/'>People</a>
         </li>
       </ul>
     </Aux>

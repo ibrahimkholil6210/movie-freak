@@ -5,6 +5,7 @@ import onlyOnItems from "../../assets/only_on_item.png";
 import peopleItem from "../../assets/people_item.png";
 import premiumItem from "../../assets/premium_item.png";
 import seeAllItem from "../../assets/see_all_item.png";
+import fireItem from "../../assets/fire_item.png";
 
 const Sidenav = (props) => {
   return (
@@ -13,10 +14,7 @@ const Sidenav = (props) => {
         <ul className={classes.SectionHelperNavigation}>
           <li>
             <div className={classes.NavHelperItemImg}>
-              <img
-                src='https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_90,h_90/rng/md/carousel/production/vt13uzhjrg5r49kh9oru'
-                alt='Navigation img'
-              />
+              <img src={fireItem} alt='Navigation img' />
             </div>
             <div className={classes.NavHelperItemCaption}>
               <h5>Top Picks</h5>
