@@ -1,0 +1,15 @@
+.CastInfoWrapper {
+  flex-basis: 80%;
+  margin: 25px 0;
+}
+
+.CastInfoTitle h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.CastInfoTitle h2::first-letter {
+  font-size: 27px;
+  font-weight: 700;
+}

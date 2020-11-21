@@ -7,6 +7,8 @@ import FlexWrapper from "../../components/UI/FlexWrapper/FlexWrapper";
 import classes from "./Details.module.css";
 import Footer from "../../components/Footer/Footer";
 import MainInfoContainer from "../../components/MainInfoContainer/MainInfoContainer";
+import CastInfo from "../../components/CastInfo/CastInfo";
+import MetaInfo from "../../components/MetaInfo/MetaInfo";
 
 class Details extends Component {
   render() {
@@ -22,6 +24,14 @@ class Details extends Component {
               <div className={classes.MainInfoWrapper}>
                 <MainInfoContainer />
               </div>
+            </FlexWrapper>
+          </Container>
+        </div>
+        <div className={classes.MovieMetaInformation}>
+          <Container>
+            <FlexWrapper>
+              <CastInfo />
+              <MetaInfo />
             </FlexWrapper>
           </Container>
         </div>
