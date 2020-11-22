@@ -1,0 +1,77 @@
+.SearchResultWrapper {
+  background-color: #f8f6f8;
+  width: calc(50% + 50px);
+  margin: auto;
+  padding: 0;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+.SingleResultImg {
+  width: 94px;
+  height: 141px;
+}
+
+.SingleResultImg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 5px;
+}
+
+.SearchResultContainer ul {
+  list-style-type: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.SingleResultCaption {
+  flex: 1;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.SingleResultCaption h4 {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.SingleResultCaption p.Rating {
+  color: #555;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+}
+
+.SingleResultCaption p {
+  font-size: 14px;
+  color: #000;
+  margin-top: 8px;
+  font-weight: 300;
+}
+
+.SearchResultContainer li {
+  padding: 8px 25px;
+  cursor: pointer;
+}
+
+.SearchResultContainer li:hover {
+  background-color: #ffffff;
+}
+
+.SearchResultContainer li:last-child:hover {
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.emptyMessage {
+  text-align: left;
+  padding: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  flex: 1;
+}

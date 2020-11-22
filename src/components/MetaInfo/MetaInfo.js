@@ -14,7 +14,6 @@ class MetaInfo extends Component {
       headers: { "Content-type": "application/json" },
     });
     const data = await castJSON.json();
-    console.log(data);
     this.setState({
       data: {
         original_title: data.original_title,
