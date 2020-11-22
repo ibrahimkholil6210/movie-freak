@@ -1,14 +1,18 @@
 import React from "react";
+import { withRouter } from "react-router-dom";
 import classes from "./Card.module.css";
 import { MdStars } from "react-icons/md";
 
 const Card = (props) => {
+  const handleClickForLink = (e) => {
+    props.history.push("/movie/details/1");
+  };
   return (
     <div className={classes.CardWrapper}>
-      <div className={classes.CardImgWrapper} style={props.height ? { height: props.height } : null}>
+      <div className={classes.CardImgWrapper} style={props.height ? { height: props.height } : null} onClick={handleClickForLink}>
         <img src={props.image} alt='Food' style={props.bRadius === false ? { borderRadius: "0px" } : null} />
       </div>
-      <div className={classes.CardDesc}>
+      <div className={classes.CardDesc} onClick={handleClickForLink}>
         <h3>{props.title}</h3>
         <p>{props.genres}</p>
       </div>
@@ -33,4 +37,4 @@ const Card = (props) => {
   );
 };
 
-export default Card;
+export default withRouter(Card);

@@ -54,3 +54,17 @@
   transform: translateY(-50%);
   content: "";
 }
+
+.GoBackLink {
+  color: #6fda44 !important;
+  display: flex;
+  display: flex !important;
+  align-items: center;
+  font-size: 18px !important;
+}
+.GoBackLink svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-39%);
+}

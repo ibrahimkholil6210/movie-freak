@@ -9,6 +9,7 @@ import Footer from "../../components/Footer/Footer";
 import MainInfoContainer from "../../components/MainInfoContainer/MainInfoContainer";
 import CastInfo from "../../components/CastInfo/CastInfo";
 import MetaInfo from "../../components/MetaInfo/MetaInfo";
+import SubtitleSpace from "../../components/SubtitleSpace/SubtitleSpace";
 
 class Details extends Component {
   render() {
@@ -32,6 +33,7 @@ class Details extends Component {
             <FlexWrapper>
               <CastInfo />
               <MetaInfo />
+              <SubtitleSpace />
             </FlexWrapper>
           </Container>
         </div>

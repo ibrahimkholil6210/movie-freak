@@ -1,0 +1,55 @@
+.SubtitleSpaceTitle h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.SubtitleSpaceTitle h2::first-letter {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+.SubtitleSpaceController ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  display: flex;
+}
+
+.SubtitleSpaceController ul li {
+  margin-right: 15px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.SubtitleSpaceController ul li select {
+  background-color: #1d4354;
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  margin-left: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.SubtitleSpaceController ul li select option {
+  padding: 10px 5px;
+}
+
+.SubtitleSpaceResult ul {
+  margin-bottom: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.SubtitleSpaceResult ul li {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #0274be;
+}
