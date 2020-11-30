@@ -4,15 +4,15 @@ import classes from "./Card.module.css";
 import { MdStars } from "react-icons/md";
 
 const Card = (props) => {
-  const handleClickForLink = (e) => {
-    props.history.push("/movie/details/1");
+  const handleClickForLink = (id) => {
+    props.history.push(`/movie/details/${id}`);
   };
   return (
     <div className={classes.CardWrapper}>
-      <div className={classes.CardImgWrapper} style={props.height ? { height: props.height } : null} onClick={handleClickForLink}>
+      <div className={classes.CardImgWrapper} style={props.height ? { height: props.height } : null} onClick={(e) => handleClickForLink(props.id)}>
         <img src={props.image} alt='Food' style={props.bRadius === false ? { borderRadius: "0px" } : null} />
       </div>
-      <div className={classes.CardDesc} onClick={handleClickForLink}>
+      <div className={classes.CardDesc} onClick={(e) => handleClickForLink(props.id)}>
         <h3>{props.title}</h3>
         <p>{props.genres}</p>
       </div>
@@ -31,7 +31,7 @@ const Card = (props) => {
         </div>
       </div>
       <div className={classes.CardQuickViewButton}>
-        <button>{props.isBlog === true ? "View More" : "Quick View"}</button>
+        <button onClick={(e) => handleClickForLink(props.id)}>{props.isBlog === true ? "View More" : "Quick View"}</button>
       </div>
     </div>
   );
