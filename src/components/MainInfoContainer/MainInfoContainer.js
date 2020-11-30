@@ -31,7 +31,8 @@ const MainInfoContainer = (props) => {
               {props.crew.filter((el) => el.job === "Director")[0].name} <br /> <span>Director</span>
             </li>
             <li>
-              {props.crew.filter((el) => el.job === "Writer")[0].name} <br /> <span>Writer</span>
+              {props.crew.filter((el) => el.department === "Writing")[0].name || props.crew.filter((el) => el.job === "Writer")[0].name} <br />{" "}
+              <span>Writer</span>
             </li>
           </ul>
         </div>
