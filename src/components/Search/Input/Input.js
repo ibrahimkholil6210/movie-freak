@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import classes from "./Input.module.css";
 import SearchResult from "./SearchResult/SearchResult";
 
@@ -10,17 +11,18 @@ class Input extends Component {
     results: null,
   };
 
+  blurTimeOut;
+
   async fetchData(query) {
     if (query !== "") {
-      const castJSON = await fetch(
+      const searchResult = await fetch(
         `https://api.themoviedb.org/3/search/movie?api_key=b65514e4064ffed3454007fd26462087&language=en-US&query=${query}&page=1&include_adult=false`,
         {
           method: "GET",
           headers: { "Content-type": "application/json" },
         }
       );
-      const { results } = await castJSON.json();
-      console.log(results);
+      const { results } = await searchResult.json();
       this.setState({ results: results });
     }
     return;
@@ -31,7 +33,9 @@ class Input extends Component {
   };
 
   handleBlur = (e) => {
-    this.setState({ isFocused: false });
+    this.blurTimeOut = setTimeout(() => {
+      this.setState({ isFocused: false });
+    }, 500);
   };
 
   handleChange = (e) => {
@@ -43,14 +47,27 @@ class Input extends Component {
     this.setState({ isLoading: false });
   };
 
+  handleMovieReq = (id) => {
+    this.props.history.push(`/movie/details/${id}`);
+  };
+
+  componentWillUnmount() {
+    clearTimeout(this.blurTimeOut);
+  }
+
   render() {
     return (
       <div className={classes.SearchInputArea}>
         <input placeholder='What are you looking for?' onFocus={this.handleFocus} onChange={this.handleChange} onBlur={this.handleBlur} />
-        <SearchResult isFocused={this.state.isFocused} message={this.state.boxMessage} results={this.state.results} />
+        <SearchResult
+          isFocused={this.state.isFocused}
+          message={this.state.boxMessage}
+          results={this.state.results}
+          handleMovieReq={this.handleMovieReq}
+        />
       </div>
     );
   }
 }
 
-export default Input;
+export default withRouter(Input);

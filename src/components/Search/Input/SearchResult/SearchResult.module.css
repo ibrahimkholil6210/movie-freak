@@ -75,3 +75,7 @@
   font-weight: 500;
   flex: 1;
 }
+
+.SearchResultContainer {
+  width: 100%;
+}

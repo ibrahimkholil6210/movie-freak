@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./SearchResult.module.css";
 import FlexWrapper from "../../../UI/FlexWrapper/FlexWrapper";
+
 const SearchResult = (props) => {
   return (
     <>
@@ -13,8 +14,8 @@ const SearchResult = (props) => {
               <div className={classes.SearchResultContainer}>
                 <ul>
                   {props.results.map((result, i) =>
-                    i <= 5 ? (
-                      <li key={i}>
+                    i <= 10 ? (
+                      <li key={i} onClick={() => props.handleMovieReq(result.id)}>
                         <div className={classes.SingleResult}>
                           <FlexWrapper>
                             <div className={classes.SingleResultImg}>

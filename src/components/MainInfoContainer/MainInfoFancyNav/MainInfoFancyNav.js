@@ -11,8 +11,8 @@ const MainInfoFancyNav = (props) => {
         <li className={classes.ScoreButton}>
           <div className={[classes.CircleWrapper, classes.Dflex].join(" ")}>
             <CircularProgressbar
-              value={82}
-              text={`${82}%`}
+              value={props.rating * 10}
+              text={`${props.rating * 10}%`}
               styles={buildStyles({ pathColor: "#21d07a", trailColor: "#125121", textColor: "white" })}
             />
           </div>

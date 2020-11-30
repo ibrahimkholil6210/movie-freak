@@ -7,31 +7,31 @@ const MainInfoContainer = (props) => {
     <>
       <div className={classes.DetailsTitleArea}>
         <h2>
-          Kumbalangi Nights <span className={classes.Released}>(2019)</span>
+          {props.data.title} <span className={classes.Released}>({new Date(props.data.release_date).getFullYear()})</span>
         </h2>
         <div className={classes.InformationMore}>
           <ul>
-            <li>02/07/2019 (IN)</li>
+            <li>
+              {props.data.release_date} ({props.data.production_countries[0].iso_3166_1})
+            </li>
             <li>•</li>
-            <li>Comedy, Drama, Romance</li>
+            <li>{props.data.genres.map((gen) => gen.name).join(", ")}</li>
             <li>•</li>
-            <li>135MIN</li>
+            <li>{props.data.runtime + " MIN"}</li>
           </ul>
         </div>
-        <MainInfoFancyNav />
+        <MainInfoFancyNav rating={props.data.vote_average} />
         <div className={classes.StoryLineShort}>
           <h3>Overview</h3>
-          <p>
-            The story of four brothers living in the fishing hamlet of Kumbalangi when Saji, Boney and Franky decide to help Bobby stand by his love.
-          </p>
+          <p>{props.data.overview}</p>
         </div>
         <div className={classes.CreatorInormation}>
           <ul>
             <li>
-              Madhu C. Narayanan <br /> <span>Director</span>
+              {props.crew.filter((el) => el.job === "Director")[0].name} <br /> <span>Director</span>
             </li>
             <li>
-              Shyam Pushkaran <br /> <span>Writer</span>
+              {props.crew.filter((el) => el.job === "Writer")[0].name} <br /> <span>Writer</span>
             </li>
           </ul>
         </div>
