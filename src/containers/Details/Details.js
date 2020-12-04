@@ -38,6 +38,8 @@ class Details extends Component {
     );
     const { cast, crew } = await castJSON.json();
     this.setState({ cast: cast, crew: crew });
+
+    console.log(this.state);
   }
 
   render() {
