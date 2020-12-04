@@ -62,9 +62,20 @@
   align-items: center;
   font-size: 18px !important;
 }
+
 .GoBackLink svg {
   position: absolute;
   top: 50%;
   left: 0;
   transform: translateY(-39%);
+}
+
+@media screen and (max-width: 768px) {
+  .GoBackLink {
+    font-size: 12px !important;
+  }
+
+  .NavigationItems li a {
+    padding: 5px 20px;
+  }
 }

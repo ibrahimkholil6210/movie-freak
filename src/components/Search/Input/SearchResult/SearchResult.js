@@ -31,7 +31,7 @@ const SearchResult = (props) => {
                             <div className={classes.SingleResultCaption}>
                               <h4>{result.title}</h4>
                               <p className={classes.Rating}>{result.vote_average}</p>
-                              <p>{result.overview.substring(10, 200) + "..."}</p>
+                              <p className={classes.SearchResultDesc}>{result.overview.substring(10, 200) + "..."}</p>
                             </div>
                           </FlexWrapper>
                         </div>

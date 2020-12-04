@@ -20,18 +20,12 @@ const Nav = (props) => {
         ) : (
           <>
             <li>
-              <a href='/' className={classes.Active}>
+              <Link to='/' className={classes.Active}>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/'>Trending</a>
-            </li>
-            <li>
-              <a href='/'>Featured</a>
-            </li>
-            <li>
-              <a href='/'>People</a>
+              <Link to='#treanding'>Trending</Link>
             </li>
           </>
         )}

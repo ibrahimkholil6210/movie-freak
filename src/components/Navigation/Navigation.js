@@ -9,10 +9,10 @@ const Navigation = (props) => {
     <header className={classes.HeaderArea}>
       <Container>
         <nav>
-          <div className="Main-logo">
+          <div className='Main-logo'>
             <Logo />
           </div>
-          <div className="Main-nav">
+          <div className='Main-nav'>
             <Nav />
           </div>
         </nav>

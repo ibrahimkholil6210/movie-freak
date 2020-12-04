@@ -69,3 +69,15 @@
   cursor: pointer;
   color: inherit;
 }
+
+@media screen and (max-width: 768px) {
+  .CardWrapper {
+    width: 46%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .CardWrapper {
+    width: 30%;
+  }
+}

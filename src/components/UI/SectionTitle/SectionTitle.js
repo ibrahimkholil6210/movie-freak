@@ -2,11 +2,13 @@ import React from "react";
 import classes from "./SectionTitle.module.css";
 
 const SectionTitle = (props) => {
-  const listMarkUp = props.sectionNavigation.map((el, i) => (
-    <li key={i} className={i === 0 ? classes.ListActive : null}>
-      {el.title}
-    </li>
-  ));
+  const listMarkUp = props.sectionNavigation
+    ? props.sectionNavigation.map((el, i) => (
+        <li key={i} className={i === 0 ? classes.ListActive : null}>
+          {el.title}
+        </li>
+      ))
+    : null;
   return (
     <div className={classes.SectionTitleWrapper}>
       <div className={classes.TitleItem}>

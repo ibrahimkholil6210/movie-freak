@@ -17,29 +17,7 @@ class Sections extends Component {
   render() {
     return this.state.treanding ? (
       <div className={classes.SectionContain}>
-        {/* <SectionCreator
-          title='Popular'
-          sectionNavigation={[
-            { title: "Movies", href: "/movies" },
-            { title: "TV Shows", href: "/movies" },
-          ]}
-        /> */}
-        <SectionCreator
-          title='Treanding'
-          sectionNavigation={[
-            { title: "People", href: "/movies" },
-            { title: "Movies", href: "/movies" },
-            { title: "TV Shows", href: "/movies" },
-          ]}
-          data={this.state.treanding}
-        />
-        {/* <SectionCreator
-          title='People'
-          sectionNavigation={[
-            { title: "TV", href: "/movies" },
-            { title: "Movies", href: "/movies" },
-          ]}
-        /> */}
+        <SectionCreator title='Treanding' sectionNavigation={null} data={this.state.treanding} />
       </div>
     ) : null;
   }

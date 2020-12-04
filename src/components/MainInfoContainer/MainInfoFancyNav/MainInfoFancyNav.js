@@ -2,7 +2,7 @@ import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import classes from "./MainInfoFancyNav.module.css";
-import { MdList, MdBookmark, MdStars, MdFavorite, MdPlayArrow } from "react-icons/md";
+import { MdPlayArrow } from "react-icons/md";
 
 const MainInfoFancyNav = (props) => {
   return (
@@ -18,18 +18,6 @@ const MainInfoFancyNav = (props) => {
           </div>
           User <br />
           Score
-        </li>
-        <li className={classes.RegularItem}>
-          <MdList />
-        </li>
-        <li className={classes.RegularItem}>
-          <MdFavorite />
-        </li>
-        <li className={classes.RegularItem}>
-          <MdBookmark />
-        </li>
-        <li className={classes.RegularItem}>
-          <MdStars />
         </li>
         <li className={classes.PlayTeaserButton}>
           <MdPlayArrow />
