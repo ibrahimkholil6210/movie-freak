@@ -10,7 +10,7 @@
     width: calc(100% / 3 - 20px);
     box-sizing: border-box;
   }
-  .CastCardImg img {
+  .CastCardImg .ResImg {
     width: 100% !important;
     height: 130px !important;
   }

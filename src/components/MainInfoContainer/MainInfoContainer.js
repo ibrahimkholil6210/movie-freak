@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./MainInfoContainer.module.css";
 import MainInfoFancyNav from "./MainInfoFancyNav/MainInfoFancyNav";
 
 const MainInfoContainer = (props) => {
+  const [writterFlag, setWritterFlag] = useState(false);
+  useEffect(() => {
+    props.crew.forEach((el) => {
+      el.department === "Writing" || el.job === "Writer" ? setWritterFlag(true) : setWritterFlag(false);
+    });
+  }, [props]);
   return (
     <>
       <div className={classes.DetailsTitleArea}>
@@ -12,7 +18,7 @@ const MainInfoContainer = (props) => {
         <div className={classes.InformationMore}>
           <ul>
             <li>
-              {props.data.release_date} ({props.data.production_countries[0].iso_3166_1})
+              {props.data.release_date} ({props.data.production_countries.length > 0 ? props.data.production_countries[0].iso_3166_1 : null})
             </li>
             <li>•</li>
             <li>{props.data.genres.map((gen) => gen.name).join(", ")}</li>
@@ -30,10 +36,12 @@ const MainInfoContainer = (props) => {
             <li>
               {props.crew.filter((el) => el.job === "Director")[0].name} <br /> <span>Director</span>
             </li>
-            <li>
-              {props.crew.filter((el) => el.department === "Writing")[0].name || props.crew.filter((el) => el.job === "Writer")[0].name} <br />{" "}
-              <span>Writer</span>
-            </li>
+            {writterFlag ? (
+              <li>
+                {props.crew.filter((el) => el.department === "Writing")[0].name || props.crew.filter((el) => el.job === "Writer")[0].name} <br />{" "}
+                <span>Writer</span>
+              </li>
+            ) : null}
           </ul>
         </div>
       </div>
