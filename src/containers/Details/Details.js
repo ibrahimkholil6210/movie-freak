@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
+import ReactLoading from "react-loading";
 import Navigation from "../../components/Navigation/Navigation";
 import Aux from "../../hoc/Auxiliary/Auxiliary";
 import Container from "../../hoc/Container/Container";
@@ -61,9 +62,9 @@ class Details extends Component {
         <div className={classes.MovieMetaInformation}>
           <Container>
             <FlexWrapper>
+              <SubtitleSpace />
               <CastInfo cast={this.state.cast} />
               <MetaInfo data={this.state.data} />
-              <SubtitleSpace />
             </FlexWrapper>
           </Container>
         </div>
@@ -75,7 +76,9 @@ class Details extends Component {
         </div>
       </Aux>
     ) : (
-      <div>Wait</div>
+      <div className={classes.AnimationWrapper}>
+        <ReactLoading type={"spin"} color={"#1d4354"} />
+      </div>
     );
   }
 }

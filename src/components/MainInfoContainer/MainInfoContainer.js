@@ -1,14 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classes from "./MainInfoContainer.module.css";
 import MainInfoFancyNav from "./MainInfoFancyNav/MainInfoFancyNav";
 
 const MainInfoContainer = (props) => {
-  const [writterFlag, setWritterFlag] = useState(false);
-  useEffect(() => {
-    props.crew.forEach((el) => {
-      el.department === "Writing" || el.job === "Writer" ? setWritterFlag(true) : setWritterFlag(false);
-    });
-  }, [props]);
   return (
     <>
       <div className={classes.DetailsTitleArea}>
@@ -36,12 +30,10 @@ const MainInfoContainer = (props) => {
             <li>
               {props.crew.filter((el) => el.job === "Director")[0].name} <br /> <span>Director</span>
             </li>
-            {writterFlag ? (
-              <li>
-                {props.crew.filter((el) => el.department === "Writing")[0].name || props.crew.filter((el) => el.job === "Writer")[0].name} <br />{" "}
-                <span>Writer</span>
-              </li>
-            ) : null}
+            <li>
+              {props.crew.filter((el) => el.department === "Writing")[0].name || props.crew.filter((el) => el.job === "Writer")[0].name} <br />{" "}
+              <span>Writer</span>
+            </li>
           </ul>
         </div>
       </div>
