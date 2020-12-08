@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./MainInfoContainer.module.css";
 import MainInfoFancyNav from "./MainInfoFancyNav/MainInfoFancyNav";
 
 const MainInfoContainer = (props) => {
+  const [director, setDirector] = useState(null);
+  const [writter, setwritter] = useState(null);
+  useEffect(() => {
+    props.crew.forEach((el) => {
+      if (el.job === "Director" || el.department === "Directing") {
+        setDirector(el.name);
+      } else if (el.job === "Writer" || el.department === "Writing") {
+        setwritter(el.name);
+      }
+    });
+  }, []);
   return (
     <>
       <div className={classes.DetailsTitleArea}>
@@ -28,11 +39,10 @@ const MainInfoContainer = (props) => {
         <div className={classes.CreatorInormation}>
           <ul>
             <li>
-              {props.crew.filter((el) => el.job === "Director")[0].name} <br /> <span>Director</span>
+              {director ? director : "Not Specified"} <br /> <span>Director</span>
             </li>
             <li>
-              {props.crew.filter((el) => el.department === "Writing")[0].name || props.crew.filter((el) => el.job === "Writer")[0].name} <br />{" "}
-              <span>Writer</span>
+              {writter ? writter : "Not Specified"} <br /> <span>Writer</span>
             </li>
           </ul>
         </div>
