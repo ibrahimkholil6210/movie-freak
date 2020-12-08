@@ -13,7 +13,7 @@ const MainInfoContainer = (props) => {
         setwritter(el.name);
       }
     });
-  }, []);
+  }, [props.crew]);
   return (
     <>
       <div className={classes.DetailsTitleArea}>
