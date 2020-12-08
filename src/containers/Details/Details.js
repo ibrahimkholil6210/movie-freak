@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import ReactLoading from "react-loading";
+import ModalVideo from "react-modal-video";
 import Navigation from "../../components/Navigation/Navigation";
 import Aux from "../../hoc/Auxiliary/Auxiliary";
 import Container from "../../hoc/Container/Container";
@@ -11,12 +12,15 @@ import MainInfoContainer from "../../components/MainInfoContainer/MainInfoContai
 import CastInfo from "../../components/CastInfo/CastInfo";
 import MetaInfo from "../../components/MetaInfo/MetaInfo";
 import SubtitleSpace from "../../components/SubtitleSpace/SubtitleSpace";
+import "../../assets/css/video.css";
 
 class Details extends Component {
   state = {
     data: null,
     cast: null,
     crew: null,
+    videos: null,
+    isOpen: false,
   };
 
   async componentDidMount() {
@@ -39,11 +43,34 @@ class Details extends Component {
     );
     const { cast, crew } = await castJSON.json();
     this.setState({ cast: cast, crew: crew });
+
+    const videoJSON = await fetch(
+      `https://api.themoviedb.org/3/movie/${this.props.match.params.id}/videos?api_key=b65514e4064ffed3454007fd26462087&language=en-US`,
+      {
+        method: "GET",
+        headers: { "Content-type": "application/json" },
+      }
+    );
+    const { results } = await videoJSON.json();
+    this.setState({ videos: results });
   }
+
+  handleVideo = (e) => {
+    this.setState({ isOpen: !this.state.isOpen });
+  };
 
   render() {
     return this.state.data && this.state.cast && this.state.crew ? (
       <Aux>
+        {this.state.videos ? (
+          <ModalVideo
+            channel='youtube'
+            autoplay
+            isOpen={this.state.isOpen}
+            videoId={this.state.videos[0].key}
+            onClose={() => this.setState({ isOpen: false })}
+          />
+        ) : null}
         <Navigation />
         <div
           className={classes.DetailsWrapper}
@@ -54,7 +81,7 @@ class Details extends Component {
                 <img src={`https://image.tmdb.org/t/p/w300_and_h450_bestv2/${this.state.data.poster_path}`} alt={this.state.data.title} />
               </div>
               <div className={classes.MainInfoWrapper}>
-                <MainInfoContainer data={this.state.data} crew={this.state.crew} />
+                <MainInfoContainer data={this.state.data} crew={this.state.crew} handleVideo={this.handleVideo} />
               </div>
             </FlexWrapper>
           </Container>

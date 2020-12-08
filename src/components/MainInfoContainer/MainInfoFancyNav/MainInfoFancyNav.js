@@ -21,7 +21,7 @@ const MainInfoFancyNav = (props) => {
         </li>
         <li className={classes.PlayTeaserButton}>
           <MdPlayArrow />
-          <div>Play Teaser</div>
+          <div onClick={props.handleVideo}>Play Teaser</div>
         </li>
       </ul>
     </div>

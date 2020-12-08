@@ -20,7 +20,7 @@ const MainInfoContainer = (props) => {
             <li>{props.data.runtime + " MIN"}</li>
           </ul>
         </div>
-        <MainInfoFancyNav rating={props.data.vote_average} />
+        <MainInfoFancyNav rating={props.data.vote_average} handleVideo={props.handleVideo} />
         <div className={classes.StoryLineShort}>
           <h3>Overview</h3>
           <p>{props.data.overview}</p>
