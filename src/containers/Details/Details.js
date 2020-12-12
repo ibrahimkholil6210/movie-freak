@@ -67,7 +67,7 @@ class Details extends Component {
             channel='youtube'
             autoplay
             isOpen={this.state.isOpen}
-            videoId={this.state.videos[0].key}
+            videoId={this.state.videos.length > 0 ? this.state.videos[0].key : null}
             onClose={() => this.setState({ isOpen: false })}
           />
         ) : null}
