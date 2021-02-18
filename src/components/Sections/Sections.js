@@ -17,29 +17,15 @@ class Sections extends Component {
   render() {
     return this.state.treanding ? (
       <div className={classes.SectionContain}>
-        {/* <SectionCreator
-          title='Popular'
-          sectionNavigation={[
-            { title: "Movies", href: "/movies" },
-            { title: "TV Shows", href: "/movies" },
-          ]}
-        /> */}
         <SectionCreator
           title='Treanding'
           sectionNavigation={[
-            { title: "People", href: "/movies" },
-            { title: "Movies", href: "/movies" },
-            { title: "TV Shows", href: "/movies" },
+            { title: "Movies", href: "/movies", active: true },
+            { title: "People", href: "/movies", active: false },
+            { title: "TV Shows", href: "/movies", active: false },
           ]}
           data={this.state.treanding}
         />
-        {/* <SectionCreator
-          title='People'
-          sectionNavigation={[
-            { title: "TV", href: "/movies" },
-            { title: "Movies", href: "/movies" },
-          ]}
-        /> */}
       </div>
     ) : null;
   }

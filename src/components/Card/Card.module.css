@@ -1,6 +1,7 @@
 .CardWrapper {
   width: 23%;
   margin: 0 0 15px 0;
+  position: relative;
 }
 
 .CardImgWrapper,
@@ -68,4 +69,11 @@
   text-transform: uppercase;
   cursor: pointer;
   color: inherit;
+}
+
+.QuickViewMenu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff;
 }

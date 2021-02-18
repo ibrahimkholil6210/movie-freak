@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./SectionTitle.module.css";
 
 const SectionTitle = (props) => {
-  const listMarkUp = props.sectionNavigation.map((el, i) => (
-    <li key={i} className={i === 0 ? classes.ListActive : null}>
+  const [list, setList] = useState(props.sectionNavigation);
+
+  const handleActiveNavigation = (index, fullList) => {
+    const newList = fullList.map((el, i) => (i === index ? { ...el, active: true } : { ...el, active: false }));
+    setList(newList);
+  };
+
+  const listMarkUp = list.map((el, i, f) => (
+    <li key={i} className={el.active ? classes.ListActive : null} onClick={() => handleActiveNavigation(i, f)}>
       {el.title}
     </li>
   ));

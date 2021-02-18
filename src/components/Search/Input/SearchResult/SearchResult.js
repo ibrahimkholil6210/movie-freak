@@ -1,15 +1,22 @@
 import React from "react";
+import ReactLoading from "react-loading";
 import classes from "./SearchResult.module.css";
 import FlexWrapper from "../../../UI/FlexWrapper/FlexWrapper";
 
 const SearchResult = (props) => {
+  let loadingAnimation = null;
+  if (props.message.type === 1) {
+    loadingAnimation = <ReactLoading type={"bubbles"} color={"#1d4354"} />;
+  } else {
+    loadingAnimation = <ReactLoading type={"spinningBubbles"} color={"#1d4354"} />;
+  }
   return (
     <>
       {props.isFocused ? (
         <>
           <div className={classes.SearchResultWrapper}>
             {props.results === null ? (
-              <div className={classes.emptyMessage}>{props.message}</div>
+              <div className={classes.emptyMessage}>{loadingAnimation}</div>
             ) : (
               <div className={classes.SearchResultContainer}>
                 <ul>
@@ -31,7 +38,7 @@ const SearchResult = (props) => {
                             <div className={classes.SingleResultCaption}>
                               <h4>{result.title}</h4>
                               <p className={classes.Rating}>{result.vote_average}</p>
-                              <p>{result.overview.substring(10, 200) + "..."}</p>
+                              <p className={classes.SearchResultDesc}>{result.overview.substring(10, 200) + "..."}</p>
                             </div>
                           </FlexWrapper>
                         </div>

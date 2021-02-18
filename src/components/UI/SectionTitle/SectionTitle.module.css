@@ -27,10 +27,6 @@
   color: #1d4354;
 }
 
-.TitleItem:nth-child(2) ul li:last-child {
-  padding-right: 0;
-}
-
 .ListActive {
   border-bottom: 1px solid #e9e9eb;
   box-shadow: 0 1px 4px 0 rgba(48, 56, 97, 0.2);

@@ -7,7 +7,10 @@ class Input extends Component {
   state = {
     isLoading: false,
     isFocused: false,
-    boxMessage: "Start Typing...",
+    boxMessage: {
+      type: 1,
+      text: "Start Typing...",
+    },
     results: null,
   };
 
@@ -41,7 +44,7 @@ class Input extends Component {
   handleChange = (e) => {
     this.setState({ isLoading: true });
     if (e.target.value.length !== "") {
-      this.setState({ boxMessage: "Please wait are fetching data!" });
+      this.setState({ boxMessage: { type: 2, text: "Please wait are fetching data!" } });
       this.fetchData(e.target.value);
     }
     this.setState({ isLoading: false });
